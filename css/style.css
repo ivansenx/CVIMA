@@ -1,0 +1,312 @@
+/*Coloreado en espacio de color rec709*/
+
+*{
+    box-sizing: border-box;
+    font-family: Roboto, Helvetica, sans-serif;
+    transition: 0.3s linear;
+}
+ul{
+    list-style:circle;
+    list-style-position: inside;
+}
+img{
+    width: 100%;
+    max-width: fit-content;
+    border-radius: 100%;
+    border: 1px solid black;
+}
+#subirarriba{
+    background: url(../img/up-arrow-svgrepo-com.svg) center no-repeat;
+    background-size: cover;
+    display: none;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 100%;
+    cursor: pointer;
+}
+#subirarriba:hover{
+    background-color: whitesmoke;
+    border: 2px solid darkgoldenrod;
+    scale: 1.5;
+}
+#fotoperfil:hover{
+    animation: giro 0.66s ease-in-out;
+}
+@keyframes giro {
+    0%{
+        rotate: 360deg;
+        scale: 1.0;
+    }
+    50%{
+        scale: 1.1;
+    }
+    100%{
+        rotate: 0deg;
+        scale: 1.0;
+    }
+}
+body{
+    background-color: orange;
+}
+body a{
+    text-decoration: none;
+    color: darkblue;
+}
+body a:visited{
+    color: darkred;
+}
+
+/*Header*/
+
+#currititl{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    font-style:oblique;
+    color: whitesmoke;
+    background-color: orangered;
+    border-radius: 25px;
+    padding: 1em;
+    margin: 1em .5em;
+}
+#currititl:hover{
+    background-color: lightsalmon;
+    color: darkslategray;
+}
+/*Margen izq*/
+
+div#margenizq{
+    flex: 1;
+    text-align: center;
+}
+#nombre{
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+#datosgenerales, #competencias{
+    background-color: whitesmoke;
+    border-radius: 25px;
+    border: 2px solid darkgoldenrod;
+}
+#competencias ul{
+    text-align: justify;
+}
+#competencias .experiencia:hover, #datosgenerales:hover, #skills>h4:hover, #skills>h4:hover ~ *{
+    background-color: lightgray;
+}
+/*Margen dcho*/
+
+div#margendcho{
+    flex: 2;
+}
+div#margendcho h2{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+}
+#margendcho > div{
+    border: 2px solid darkgoldenrod;
+    border-radius: 25px;
+}
+
+/*Experiencia laboral*/
+
+#experiencialaboral{
+    background-color: lightyellow;
+}
+#experiencialaboral > h2{
+    background-color: lightgoldenrodyellow;
+}
+#experiencialaboral > h2:hover{
+    background-color: orange;
+}
+#experiencialaboral .experiencia:hover{
+    background-color: lightgoldenrodyellow;
+}
+#experiencialaboral .experiencia:last-child:hover,#formacion .experiencia:last-child:hover{
+    border-radius: 0 0 25px 25px;
+}
+
+/*Formacion*/
+
+#formacion{
+    background-color: rgb(255, 225, 230);
+}
+#formacion > h2{
+    background-color: lightpink;
+}
+#formacion > h2:hover{
+    background-color: palevioletred;
+}
+#formacion .experiencia:hover{
+    background-color: pink;
+}
+/*Combo formacion+exper*/
+
+#experiencialaboral > h2, #formacion > h2{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+/*Otros*/
+
+#email::before{
+    content: '';
+}
+#tel::before{
+    content: '';
+}
+
+/*Clases*/
+
+.experiencia{
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+}
+.experiencia:not(:last-child){
+    border-bottom: 1px solid darkslategray;
+}
+.experiencia ul{
+    text-align: left;
+}
+
+/*Footer*/
+
+footer{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+footer > *{
+    flex: 1;
+}
+#guardarpdf{
+    background: url(../img/print-svgrepo-com.svg) center no-repeat rgba(255, 255, 255, 0.6);
+    background-size: cover;
+    width: 64px;
+    height: 64px;
+    margin: 1rem auto;
+    color: white;
+    border-radius: 100%;
+    cursor: pointer;
+}
+#guardarpdf:hover{
+    background-color: whitesmoke;
+    border: 2px solid darkgoldenrod;
+    scale: 1.2;
+}
+/*@media*/
+@media screen and (max-width:639px) {
+    main div{
+        margin: 1rem 0.25rem;
+    }
+}
+@media screen and (min-width:640px){    
+    main{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #margenizq{
+        flex: 1;
+    }
+    #margendcho{
+        flex: 2;
+    }
+    main{
+        padding: 1rem;
+    }
+    main div{
+        margin: 0.5rem;
+    }
+}
+@media screen and (min-width:1280px) {
+    div#margenizq{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    div#margendcho{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    div#margendcho>div{
+        flex: 1;
+    }
+}
+
+@media print{
+    *{
+        margin: 0.1rem;
+        padding: 0.1rem;
+        text-decoration: none;
+    }
+    /*A4 forzado*/
+    body{
+        position: fixed;
+        max-width: 21cm;
+        max-height: 29.7cm;
+        overflow: hidden;
+    }
+    /*
+    #alertprint::after{
+        content: "Este curriculum está optimizado para impresión en un folio A4.";
+    }
+    */
+    a{
+        color: black;
+    }
+    #currititl{
+        margin: 0.5rem 0.1rem;
+        padding: 0.5rem 0.1rem;
+    }
+    main{
+        display: flex;
+    }
+    img{
+        display: none;
+    }
+    #margenizq{
+        flex: 1;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    #datosgenerales, #competencias{
+        border-radius: 0;
+        border: none;
+    }
+    #margendcho{
+        flex: 2;
+        display: flex;
+        flex-wrap: nowrap;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    #margendcho > div{
+        flex: 1;
+        border: none;
+    }
+    #margendcho > div:first-child{
+        border-right: 1px solid black;
+        border-radius: 0;
+    }
+    #margendcho > div:nth-child(2){
+        border-left: 1px solid black;
+        border-radius: 0;
+    }
+    #margendcho > div *{
+        font-size: small;
+    }
+    #guardarpdf, #margendcho .experiencia ul:not(#otrosestudios ul, #otrasexperiencias ul){
+        display: none;
+    }
+}
