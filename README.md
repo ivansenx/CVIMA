@@ -1,1 +1,1 @@
-This Curriculum Vitae belongs to Iván M. Asenjo, citizen from Spain.
+A simple curriculum vitae made for myself.
