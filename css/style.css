@@ -183,14 +183,10 @@ div#margendcho h2{
 /*Footer*/
 
 footer{
-    display: flex;
-    align-content: center;
-    align-items: center;
     text-align: center;
+    margin: auto;
 }
-footer > *{
-    flex: 1;
-}
+#imprimir
 #guardarpdf{
     background: url(../img/print-svgrepo-com.svg) center no-repeat rgba(255, 255, 255, 0.6);
     background-size: cover;
@@ -205,6 +201,20 @@ footer > *{
     background-color: whitesmoke;
     border: 2px solid darkgoldenrod;
     scale: 1.2;
+}
+#qrcodes{
+    display: none;
+    align-content: space-between;
+    justify-content: center;
+}
+#qrcodes figure{
+    width: 5rem;
+}
+#qrcodes figcaption{
+    font-size: smaller;
+}
+#qrcodes img{
+    border-radius: 0;
 }
 /*@media*/
 @media screen and (max-width:639px) {
@@ -308,5 +318,11 @@ footer > *{
     }
     #guardarpdf, #margendcho .experiencia ul:not(#otrosestudios ul, #otrasexperiencias ul){
         display: none;
+    }
+    #qrcodes{
+        display: flex;
+    }
+    #qrcodes figure img{
+        display: block;
     }
 }

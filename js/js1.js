@@ -1,30 +1,30 @@
 /*Cualquier funcionalidad añadida al curriculum irá aquí*/
 
-
-$(document).ready(function(){
-    //Botón imprimir
-    $("#guardarpdf").click(function(){
-        window.print()
+document.addEventListener("DOMContentLoaded", function(){
+    //Función del botón Imprimir
+    var guardarpdf=document.getElementById("guardarpdf");
+    guardarpdf.addEventListener("click", function(){
+        window.print();
     });
 
-    //Fade del botón para subir arriba
-    
-    var arribab=$("#subirarriba");
-    $(document).scroll(function(){
-        var y=$(this).scrollTop();
+    //Función del botón Subir Arriba
+
+    var arribab=document.getElementById("subirarriba");
+
+    document.addEventListener("scroll", function(){
+        var y=window.scrollY;
         if (y>150){
-            arribab.fadeIn();
+            arribab.style.display="block";
         }
         else{
-            arribab.fadeOut();
+            arribab.style.display="none";
         }
     })
-
-    arribab.click(function(){
+    arribab.addEventListener("click", function(){
         window.scroll({
             top:0,
             left:0,
-            behavior:'smooth',
+            behavior: 'smooth',
         })
     })
 })
