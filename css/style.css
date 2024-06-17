@@ -31,7 +31,7 @@ img{
 }
 #subirarriba:hover{
     background-color: whitesmoke;
-    border: 2px solid darkgoldenrod;
+    border: 2px solid black;
     scale: 1.5;
 }
 #fotoperfil:hover{
@@ -51,14 +51,10 @@ img{
     }
 }
 body{
-    background-color: orange;
+    background-color: lightgreen;
 }
 body a{
     text-decoration: none;
-    color: darkblue;
-}
-body a:visited{
-    color: darkred;
 }
 
 /*Header*/
@@ -70,13 +66,13 @@ body a:visited{
     font-weight: bold;
     font-style:oblique;
     color: whitesmoke;
-    background-color: orangered;
+    background-color: darkgreen;
     border-radius: 25px;
     padding: 1em;
     margin: 1em .5em;
 }
 #currititl:hover{
-    background-color: lightsalmon;
+    background-color: greenyellow;
     color: darkslategray;
 }
 /*Margen izq*/
@@ -93,7 +89,7 @@ div#margenizq{
 #datosgenerales, #competencias{
     background-color: whitesmoke;
     border-radius: 25px;
-    border: 2px solid darkgoldenrod;
+    border: 2px solid gray;
 }
 #competencias ul{
     text-align: justify;
@@ -112,7 +108,7 @@ div#margendcho h2{
     padding: 1rem;
 }
 #margendcho > div{
-    border: 2px solid darkgoldenrod;
+    border: 2px solid gray;
     border-radius: 25px;
 }
 
@@ -199,7 +195,7 @@ footer{
 }
 #guardarpdf:hover{
     background-color: whitesmoke;
-    border: 2px solid darkgoldenrod;
+    border: 4px solid black;
     scale: 1.2;
 }
 #qrcodes{
@@ -290,6 +286,9 @@ footer{
         border: 1px solid black;
         border-radius: 10px;
     }
+    #margenizq > div *{
+        font-size:small;
+    }
     #datosgenerales, #competencias{
         border-radius: 0;
         border: none;
@@ -314,7 +313,7 @@ footer{
         border-radius: 0;
     }
     #margendcho > div *{
-        font-size: small;
+        font-size:smaller;
     }
     #guardarpdf, #margendcho .experiencia ul:not(#otrosestudios ul, #otrasexperiencias ul){
         display: none;
