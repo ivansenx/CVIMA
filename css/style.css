@@ -51,7 +51,7 @@ img{
     }
 }
 body{
-    background-color: lightgreen;
+    background-color: lightblue;
 }
 body a{
     text-decoration: none;
@@ -66,13 +66,13 @@ body a{
     font-weight: bold;
     font-style:oblique;
     color: whitesmoke;
-    background-color: darkgreen;
+    background-color: darkblue;
     border-radius: 25px;
     padding: 1em;
     margin: 1em .5em;
 }
 #currititl:hover{
-    background-color: greenyellow;
+    background-color: cadetblue;
     color: darkslategray;
 }
 /*Margen izq*/
@@ -94,7 +94,11 @@ div#margenizq{
 #competencias ul{
     text-align: justify;
 }
-#competencias h2:hover, #competencias .experiencia:hover, #datosgenerales:hover, #skills>h4:hover, #skills>h4:hover ~ *{
+#competencias h2:hover{
+    background-color: gray;
+    color: lightgray;
+}
+#competencias .experiencia:hover, #datosgenerales:hover, #skills>h4:hover, #skills>h4:hover ~ *{
     background-color: lightgray;
 }
 /*Margen dcho*/
